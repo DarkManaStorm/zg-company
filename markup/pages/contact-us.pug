@@ -1,0 +1,83 @@
+doctype html
+html(class="no-js", lang="ru")
+  include ../components/head/head.pug
+  head
+    +head(head.contact)
+  body.page
+    |%=symbols=%
+
+    .wrapper
+      .content.column
+        header.page-header.page-header--contact-us#rowTop
+          .page-header__row-top.page-header__row-top--home
+            .container.row.row--media890-jc-c
+              button.hamburger.hamburger--spin(type="button")
+                span.hamburger-box
+                  span.hamburger-inner
+              .logo
+                a.logo__text(href="index.html") ZG Investment
+                  span.m--l5 & Consulting Ltd
+              nav.main-nav.grow.row.row--ai-c
+                ul.main-nav__list.main-nav__list--mobileHidden.row.m--l-a
+                  li.main-nav__items
+                    a.main-nav__item.text.text--white14.text--fw600(href="index.html") Home
+                  li.main-nav__items
+                    a.main-nav__item.text.text--white14.text--fw600(href="services.html") Services
+                  li.main-nav__items
+                    a.main-nav__item.text.text--white14.text--fw600(href="about.html") About
+                  li.main-nav__items
+                    a.main-nav__item.main-nav__item--active.text.text--white14.text--fw600(href="contact-us.html") Contact us
+              .socials.socials--header.row.row--ai-c.m--l30
+                a.socials__items.socials__items--fb(href="#")
+                  != pugHelpers.Icon.call(locals, {iconName: 'facebook', className: 'facebook'})
+                a.socials__items.socials__items--tw(href="#")
+                  != pugHelpers.Icon.call(locals, {iconName: 'twitter', className: 'twitter'})
+                a.socials__items.socials__items--inst(href="#")
+                  != pugHelpers.Icon.call(locals, {iconName: 'instagram', className: 'instagram'})
+          .contact-us.grow.row
+            form.contact-us__form(action="action.php" method="post")
+              ul.contact-us__form-list
+                li.contact-us__form-list-items.m--b20
+                  .m--b20
+                    label.contact-us__form-list-label.text.text--white16.text--fw300.m--b10.text--media1190-center(for="name") Your name:
+                    .contact-us__form-input-wrap
+                      input.contact-us__form-input.text.text--grayLowLight14.text--fw300.text--media1190-center(type="text" placeholder="Enter please your name" required)#name
+                  .m--b20
+                    label.contact-us__form-list-label.text.text--grayLowLight16.text--fw300.m--b10.text--media1190-center(for="email") Your email:
+                    .contact-us__form-input-wrap
+                      input.contact-us__form-input.text.text--grayLowLight14.text--fw300.text--media1190-center(type="email" placeholder="Enter please your email" required)#email
+                  .b
+                    label.contact-us__form-list-label.text.text--grayLowLight16.text--fw300.m--b10.text--media1190-center(for="phone") Your phone:
+                    .contact-us__form-input-wrap
+                      input.contact-us__form-input.text.text--grayLowLight14.text--fw300.text--media1190-center(type="tel" placeholder="Enter please your phone" required)#phone
+                li.contact-us__form-list-items.m--b20
+                  label.contact-us__form-list-label.text.text--grayLowLight16.text--fw300.m--b10.text--media1190-center(for="mesage") Your message:
+                  .contact-us__form-textarea-wrap
+                    textarea.contact-us__form-input.contact-us__form-input--textarea.text.text--grayLowLight14.text--fw300.text--media1190-center(placeholder="Enter please your message" required)#mesage
+                li.contact-us__form-list-items.row.row--jc-c
+                  .b--w155.b--media470-w-resize100
+                    button.slider__button.button.button--p-tb17.text.text--white13.text--fw500.text--uppercase(type="submit") Submit
+            .contact-us__img-wrap
+              img.contact-us__img(src="%=static=%img/content/contact-us-img.jpg")
+          .page-header__row-bottom
+            .container
+              .logo
+                a.logo__link(href="index.html")
+                  .logo__img-wrap
+                    img.logo__img(src="%=static=%img/content/logo-footer.svg")
+        main.page-content.grow.column
+        
+          .home
+            a.home__scroll-top.home__scroll-top--hidden(href="#rowTop")
+              span.scroll-top-arrow
+        
+      footer.page-footer
+        .footer-content
+
+    script(src='%=static=%js/separate-js/svg4everybody.min.js')
+    script svg4everybody();
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='%=static=%js/separate-js/noframework.waypoints.min.js')
+
+    //- Main scripts. You can replace it, but I recommend you to leave it here
+    script(src='%=static=%js/main%=hash=%%=min=%.js')

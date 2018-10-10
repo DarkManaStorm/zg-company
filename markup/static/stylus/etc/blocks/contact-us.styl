@@ -1,0 +1,101 @@
+.contact-us__form
+  box-sizing border-box
+  width 80%
+  padding 100px 2%
+  
+  background-color #101010
+
+.contact-us__form-list
+  reset-list()
+  
+.contact-us__form-list-items
+  margin-bottom 10px
+  &:last-child
+    margin-bottom 0
+
+.contact-us__form-list-label
+  display block
+  
+  color: white
+  font-weight 700
+  
+.contact-us__form-input
+  reset-input()
+  
+  padding: 10px 10px;
+  font-size 18px
+  line-height 21px
+  color: #495057;
+  background-color: #a9a9a9;
+  background-clip: padding-box;
+  border: 1px solid #495057;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  &:focus
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+  &--textarea
+    height 240px
+    
+    resize none
+    
+.contact-us__map
+  width 50%
+  
+.contact-us__button
+  background-color #696969
+
+  transition 0.2s ease
+  &:hover
+    background-color #292929
+    
+.contact-us__img-wrap
+  width 50%
+  
+.contact-us__img
+  display block
+  height 100vh
+  
+@media(max-width 1500px)
+  .contact-us__form
+    width 58%
+    
+@media(max-width 1200px)
+  .contact-us__form
+    width 50%
+    
+@media(max-width 1024px)
+  .contact-us
+    flex-direction column
+    height 100%
+  
+  .contact-us__form
+    flex-grow 1
+    width auto
+    padding 85px 2%
+    
+  .contact-us__img-wrap
+    display none
+    
+@media(max-width 960px)
+  .contact-us
+    flex-direction column
+    
+  .contact-us__form
+    width auto
+    
+  .contact-us__map
+    width auto
+    height 360px
+    
+@media(max-width 470px)
+  .contact-us__form
+    display flex
+    flex-direction column
+    justify-content center
+  
+  .contact-us__form-input
+    &--textarea
+      height 90px
+      padding 10px
